@@ -2,11 +2,11 @@
   "name": "laboration1-ramverk",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "dev": "parcel src/publicering.html",
-  "build": "parcel build src/publicering.html",
-  "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
-},
+  "scripts": {
+    "dev": "parcel src/publicering.html",
+    "build": "parcel build src/publicering.html",
+    "tailwind": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,5 +14,8 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.17",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
   }
 }
