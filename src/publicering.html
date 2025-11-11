@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicering — Cloudflare Pages</title>
+    <link rel="stylesheet" href="./output.css">
+
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-semibold text-purple-600">Laboration 1 - ramverk</a>
+            <nav class="space-x-4 text-sm">
+                <a href="index.html" class="text-gray-600 hover:text-purple-600">Bootstrap</a>
+                <a href="bulma.html" class="text-gray-600 hover:text-purple-600">Bulma</a>
+                <a href="milligram.html" class="text-gray-600 hover:text-purple-600">Milligram</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-10">
+        <div class="bg-purple-600 text-white text-center rounded px-4 py-2 mb-8">Detta är sidan stylad med Tailwind
+        </div>
+
+        <h1 class="text-3xl font-bold text-center mb-4">Publicering</h1>
+        <p class="text-center text-gray-600 mb-8">Beskrivning av publiceringsplattformen jag valt: Cloudflare Pages samt
+            en kort jämförelse med Netlify.</p>
+
+        <section class="bg-white shadow rounded p-6 mb-6">
+            <h2 class="text-2xl font-semibold mb-3">Varför Cloudflare Pages?</h2>
+            <p class="mb-3">
+                Cloudflare Pages ger enkel Git-driven publicering och distribuerar statiska filer via Cloudflares
+                globala edge-nätverk. Det är ett bra val för snabba statiska webbplatser och ger automatiskt HTTPS och
+                CDN-cache.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                <li>Det ger stöd för statiska sidor och de flesta SSG/JS-ramverk</li>
+                <li>Integreras med Cloudflare Workers för edge-funktionalitet</li>
+            </ul><br>
+            <p class="text-sm text-gray-600">Källa: Cloudflare Pages docs.</p>
+        </section>
+
+        <section class="bg-white shadow rounded p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-3">För- & nackdelar (sammanfattning)</h2>
+            <div class="md:flex md:space-x-6">
+                <div class="flex-1">
+                    <h4 class="font-semibold mb-2">Fördelar</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Snabb edge-leverans via Cloudflares globala nätverk.</li>
+                        <li>Automatiska builds från Git (CI) och preview-deploys.</li>
+                        <li>Lätt att koppla eget domän och få HTTPS.</li>
+                    </ul>
+                </div>
+                <div class="flex-1 mt-4 md:mt-0">
+                    <h4 class="font-semibold mb-2">Nackdelar</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Edge-funktioner (Workers) kan ha separata kostnader och kvoter.</li>
+                        <li>Avancerad SSR eller full Next.js-serverrender kräver extra konfiguration.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white shadow rounded p-6 mb-6">
+            <h2 class="text-xl font-semibold mb-3">Jämförelse med Netlify</h2>
+            <p class="mb-3">
+                Jag valde att göra jämförelsen med Netlify då det var det jag i första hand tänkte använda för
+                publicering av laborationen. Dock
+                så uppmanades man i uppgiftsbeskrivningen att prova en plattform man aldrig tidigare använt, vilket
+                resulterade i att jag testade
+                att publicera på Cloudflare. Båda plattformarna erbjuder Git-driven deploy och preview-builds. Netlify
+                har ett större ekosystem av
+                inbyggda Jamstack-verktyg (form-hantering, identity, många plugins) medan Cloudflare prioriterar extrem
+                edge-prestanda och nära
+                integration med Workers. Valet beror på om man vill ha ett ”allt-i-ett” Jamstack-ekosystem (Netlify)
+                eller maximal edge-prestanda
+                och Workers-integration (Cloudflare).
+            </p>
+            <p class="text-sm text-gray-600">Källor: Netlify pricing/docs och Cloudflare Pages docs.</p>
+        </section>
+
+        <section class="bg-white shadow rounded p-6">
+            <h2 class="text-lg font-semibold mb-2">Steg för att publicera (snabbvariant)</h2>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                <li>Skapa ett GitHub-repo och pusha din kod.</li>
+                <li>Logga in på Cloudflare Pages och skapa ett nytt projekt → välj ditt repo.</li>
+                <li>Ange byggkommando</li>
+                <li>Starta deploy. Cloudflare bygger och distribuerar automatiskt.</li>
+                <li>Konfigurera eget domän och DNS i Cloudflare om du vill använda ett eget domännamn.</li>
+            </ol>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

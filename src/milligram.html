@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skräckfilmlista — Milligram</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/milligram/dist/milligram.min.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="column column-60">
+          <a href="index.html" style="text-decoration:none; color:inherit;">
+            <h4 style="margin:0; color: #9b4dca;">Laboration 1 - ramverk</h4>
+          </a>
+        </div>
+
+        <div class="column column-40" style="text-align:right;">
+          <nav aria-label="Huvudmeny">
+            <a href="index.html" style="margin-left:0.75rem;">Startsida</a>
+            <a href="bulma.html" style="margin-left:0.75rem;">Bulma</a>
+            <a href="publicering.html" style="margin-left:0.75rem;">Publicering</a>
+          </nav>
+        </div>
+      </div>
+
+      <hr style="margin-top:0.5rem; margin-bottom:0.75rem;">
+    </div>
+
+    <div class="container">
+      <p
+        style="background:#9b4dca; padding:0.45rem; margin:0 0 1.25rem 0; border-radius:4px; text-align:center; color: white; font-weight:400;">
+        Detta är sidan stylad med Milligram
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section style="margin-top:2rem; margin-bottom:2rem;">
+      <h1 style="text-align:center;">Om Milligram</h1>
+
+      <p>
+        <strong>Milligram</strong> är ett litet, minimalistiskt CSS-ramverk med fokus på enkelhet och låg tyngd.
+        Det levererar en ren typografisk grund, standardiserade formulär och tabeller utan mycket extra designmönster.
+        Officiell webbplats: <a href="https://milligram.io" target="_blank" rel="noopener">milligram.io</a>.
+      </p>
+
+      <div class="row" style="margin-top:1rem;">
+        <div class="column column-50">
+          <h3>Fördelar</h3>
+          <ul>
+            <li>Mycket lättviktigt (snabbt att ladda).</li>
+            <li>Ren, neutral design med bra utgångspunkt för egna anpassningar.</li>
+            <li>Enkel att använda för formulär, tabeller och typografi.</li>
+            <li>Du slipper all onödig kod och funktioner som ändå inte används</li>
+          </ul>
+        </div>
+
+        <div class="column column-50">
+          <h3>Nackdelar</h3>
+          <ul>
+            <li>Färre färdiga komponenter och du får implementera interaktivitet själv.</li>
+            <li>Begränsad färg- och komponentpalett jämfört med t.ex. Bootstrap.</li>
+            <li>Ingen inbyggd navbar-, modal- eller dropdown-JS.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:1rem;">Min utvärdering</h3>
+      <p>
+        Milligram passar bra när du vill ha ett snabbt, rent och enkelt utseende utan att behöva mycket konfiguration.
+        För små projekt eller prototyper är Milligram utmärkt. Du får en väldefinierad typografi och användarvänliga
+        formulär direkt.
+        Om du däremot behöver många färdiga interaktiva komponenter eller ett mer påkostat grafiskt uttryck kan det
+        krävas mer egen CSS och JavaScript.
+        Personligen tyckte jag att det var lite tråkigt ramverk. Jag ville inte heller vara inne och korrigera utseendet
+        alltför mycket då jag ville se
+        ramverket i dess ursprungliga form.
+      </p>
+    </section>
+
+    <br>
+    <hr>
+
+    <section>
+      <h1 style="text-align:center;">Skräckfilmlista</h1>
+      <p>En enkel lista med rekommenderade skräckfilmer. Lägg till filmer via formuläret nedan.</p>
+      <h2>Skräckfilmer</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Titel</th>
+            <th>År</th>
+            <th>Betyg</th>
+            <th>Sett?</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>The Conjuring</td>
+            <td>2013</td>
+            <td>9</td>
+            <td><strong>Sett</strong></td>
+            <td style="text-align:right;"><button class="button button-outline">Radera</button></td>
+          </tr>
+          <tr>
+            <td>Hereditary</td>
+            <td>2018</td>
+            <td>8</td>
+            <td><strong>Sett</strong></td>
+            <td style="text-align:right;"><button class="button button-outline">Radera</button></td>
+          </tr>
+          <tr>
+            <td>It</td>
+            <td>2017</td>
+            <td>7</td>
+            <td><strong>Inte sett</strong></td>
+            <td style="text-align:right;"><button class="button button-outline">Radera</button></td>
+          </tr>
+          <tr>
+            <td>Hell House LLC</td>
+            <td>2015</td>
+            <td>8</td>
+            <td><strong>Sett</strong></td>
+            <td style="text-align:right;"><button class="button button-outline">Radera</button></td>
+          </tr>
+          <tr>
+            <td>Sinister</td>
+            <td>2012</td>
+            <td>9</td>
+            <td><strong>Sett</strong></td>
+            <td style="text-align:right;"><button class="button button-outline">Radera</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section style="margin-top:2rem;">
+      <h2>Lägg till en skräckfilm</h2>
+
+      <form method="get" action="#">
+        <label for="movieTitle">Titel</label>
+        <input id="movieTitle" name="title" type="text" placeholder="Ex. 'Insidious'">
+
+        <label for="movieYear">År</label>
+        <input id="movieYear" name="year" type="number" min="1900" max="2025" placeholder="ÅÅÅÅ">
+
+        <label for="movieRating">Betyg (1–10)</label>
+        <input id="movieRating" name="rating" type="number" min="1" max="10" placeholder="1–10">
+
+        <label for="movieSeen">
+          <input id="movieSeen" name="seen" type="checkbox"> Ja, jag har sett filmen
+        </label>
+
+        <p>
+          <button type="submit" class="button">Lägg till film</button>
+          <button type="reset" class="button button-outline">Rensa</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+</body>
+
+</html>

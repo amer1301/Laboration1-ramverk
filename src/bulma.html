@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skräckfilmlista — Bulma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <strong>Laboration 1 - ramverk</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="mainNav">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="mainNav" class="navbar-menu">
+        <div class="navbar-start"></div>
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">Startsida</a>
+          <a class="navbar-item" href="milligram.html">Milligram</a>
+          <a class="navbar-item" href="publicering.html">Publicering</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="notification is-primary has-text-centered" style="border-radius: 0;">
+    <p class="is-size-6">Detta är sidan stylad med Bulma</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="card">
+        <div class="card-content">
+          <h2 class="title is-4 has-text-centered">Om Bulma</h2>
+
+          <div class="content">
+            <p><strong>Vad är Bulma?</strong></p>
+            <p>
+              Bulma är ett modernt, responsivt CSS-ramverk baserat på <em>Flexbox</em>. Det är rent CSS-baserat (inga
+              inbyggda JavaScript-komponenter)
+              och erbjuder ett lättanvänt klasssystem för att snabbt bygga gränssnitt.
+              Officiell webbplats: <a href="https://bulma.io" target="_blank" rel="noopener">bulma.io</a>.
+            </p>
+
+            <div class="columns">
+              <div class="column is-half">
+                <p><strong>Fördelar</strong></p>
+                <ul>
+                  <li>Enkelt att komma igång (CDN eller npm).</li>
+                  <li>Rent CSS-ramverk, inga JS-beroenden.</li>
+                  <li>Snygg design out-of-the-box och bra dokumentation.</li>
+                  <li>Flexbox-baserat grid gör layout enkel att styra.</li>
+                </ul>
+              </div>
+
+              <div class="column is-half">
+                <p><strong>Nackdelar</strong></p>
+                <ul>
+                  <li>Ingen inbyggd JavaScript. Du måste själv lägga till interaktivitet (t.ex. modaler, dropdowns).
+                  </li>
+                  <li>Ibland många klassnamn på ett element (långa class-listor).</li>
+                  <li>Färre färdiga, avancerade komponenter jämfört med större ramverk som Bootstrap.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p><strong>Min utvärdering</strong></p>
+            <p>
+              Bulma är utmärkt för mindre till medelstora webbprojekt där du vill få ett modernt utseende snabbt utan
+              att skriva mycket egen CSS.
+              Jag uppskattar särskilt kolumnsystemet och de tydliga utility-klasserna (t.ex.
+              <code>button is-primary</code>, <code>columns</code>).
+              Om du behöver avancerad interaktivitet (modals, tooltips, komplexa dropdowns) får du dock implementera
+              JavaScript själv eller kombinera Bulma med små JS-bibliotek.
+            </p>
+
+            <p>
+              Sammanfattningsvis fungerar Bulma mycket bra när du prioriterar enkelhet och ett rent flexbox-baserat
+              grid. För större applikationer
+              kan det dock krävas mer kompletterande kod.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">Skräckfilmlista</h1>
+        <p class="subtitle">En lista med rekommenderade skräckfilmer. Lägg till filmer via formuläret nedan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="box">
+        <h2 class="title is-4">Skräckfilmer</h2>
+        <div class="table-container">
+          <table class="table is-fullwidth is-striped is-hoverable">
+            <thead>
+              <tr>
+                <th>Titel</th>
+                <th>År</th>
+                <th>Betyg</th>
+                <th>Sett?</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="moviesTbody">
+              <tr>
+                <td>The Conjuring</td>
+                <td>2013</td>
+                <td>9</td>
+                <td><span class="tag is-success">Sett</span></td>
+                <td class="has-text-right"><button class="button is-small is-danger is-outlined">Radera</button></td>
+              </tr>
+              <tr>
+                <td>Hereditary</td>
+                <td>2018</td>
+                <td>8</td>
+                <td><span class="tag is-success">Sett</span></td>
+                <td class="has-text-right"><button class="button is-small is-danger is-outlined">Radera</button></td>
+              </tr>
+              <tr>
+                <td>It</td>
+                <td>2017</td>
+                <td>7</td>
+                <td><span class="tag is-danger">Inte sett</span></td>
+                <td class="has-text-right"><button class="button is-small is-danger is-outlined">Radera</button></td>
+              </tr>
+              <tr>
+                <td>Hell House LLC</td>
+                <td>2015</td>
+                <td>8</td>
+                <td><span class="tag is-success">Sett</span></td>
+                <td class="has-text-right"><button class="button is-small is-danger is-outlined">Radera</button></td>
+              </tr>
+              <tr>
+                <td>Sinister</td>
+                <td>2012</td>
+                <td>9</td>
+                <td><span class="tag is-success">Sett</span></td>
+                <td class="has-text-right"><button class="button is-small is-danger is-outlined">Radera</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2 class="title is-4">Lägg till en skräckfilm</h2>
+
+        <form id="addMovieForm" novalidate>
+          <div class="columns is-multiline">
+            <div class="column is-6">
+              <div class="field">
+                <label class="label" for="movieTitle">Titel</label>
+                <div class="control">
+                  <input id="movieTitle" class="input" type="text" placeholder="Ex. 'Insidious'">
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="field">
+                <label class="label" for="movieYear">År</label>
+                <div class="control">
+                  <input id="movieYear" class="input" type="number" min="1900" max="2025" placeholder="ÅÅÅÅ">
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-3">
+              <div class="field">
+                <label class="label" for="movieRating">Betyg (1–10)</label>
+                <div class="control">
+                  <input id="movieRating" class="input" type="number" min="1" max="10" placeholder="1–10">
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-12">
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input id="movieSeen" type="checkbox"> Ja, jag har sett filmen
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="column is-12">
+              <div class="field is-grouped">
+                <div class="control">
+                  <button type="submit" class="button is-danger">Lägg till film</button>
+                </div>
+                <div class="control">
+                  <button type="button" id="clearStorageBtn" class="button is-light">Rensa sparade</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const burgers = document.querySelectorAll('.navbar-burger');
+      burgers.forEach(b => {
+        b.addEventListener('click', () => {
+          const target = b.dataset.target;
+          const menu = document.getElementById(target) || b.closest('.navbar').querySelector('.navbar-menu');
+          b.classList.toggle('is-active');
+          if (menu) menu.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
