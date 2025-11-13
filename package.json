@@ -1,12 +1,13 @@
 {
   "name": "laboration1-ramverk",
   "version": "1.0.0",
+  "private": true,
   "main": "index.js",
- "scripts": {
-  "dev": "npx parcel src/publicering.html",
-  "build": "npx parcel build src/publicering.html",
-  "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
-}
+  "scripts": {
+    "dev": "npx parcel src/publicering.html",
+    "build": "npx parcel build src/publicering.html --dist-dir dist",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
